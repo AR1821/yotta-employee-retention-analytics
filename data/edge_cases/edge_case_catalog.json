@@ -1,0 +1,52 @@
+
+{
+  "feature_cutoff": "2026-10-31",
+  "description": "Isolated labelled test fixtures. These records must never enter the clean analytics dataset.",
+  "edge_cases": [
+    {
+      "case_id": "EDGE-001",
+      "label": "FUTURE_INFORMATION_LEAKAGE",
+      "description": "A feature record uses information dated after the prediction cutoff.",
+      "record": {
+        "employee_id": "EMP-000001",
+        "feature_date": "2026-11-15",
+        "feature_name": "engagement_score",
+        "feature_value": 3
+      }
+    },
+    {
+      "case_id": "EDGE-002",
+      "label": "MISSING_SURVEY_TREATED_AS_NEGATIVE",
+      "description": "A missing survey is incorrectly converted into a low engagement score.",
+      "record": {
+        "employee_id": "EMP-000002",
+        "response_status": "MISSING",
+        "engagement_score": null,
+        "derived_engagement_score": 0,
+        "missing_handling": "IMPUTED_AS_LOW"
+      }
+    },
+    {
+      "case_id": "EDGE-003",
+      "label": "INCONSISTENT_ATTRITION_OUTCOME",
+      "description": "A voluntary separation is incorrectly labelled as no attrition.",
+      "record": {
+        "employee_id": "EMP-000003",
+        "separation_type": "VOLUNTARY",
+        "outcome_label": false,
+        "outcome_date": "2027-03-15"
+      }
+    },
+    {
+      "case_id": "EDGE-004",
+      "label": "UNEXPLAINED_UNREVIEWED_SUPPORT_SCORE",
+      "description": "An individual support score has no explanation and has not received human review.",
+      "record": {
+        "employee_id": "EMP-000004",
+        "support_score": 82,
+        "reason_codes": [],
+        "human_reviewed": false
+      }
+    }
+  ]
+}

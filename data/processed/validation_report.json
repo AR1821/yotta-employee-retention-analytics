@@ -1,0 +1,20 @@
+{
+    "feature_cutoff": "2026-10-31",
+    "total_employees": 10000,
+    "total_roles": 10,
+    "total_teams": 10,
+    "total_assignments": 10379,
+    "total_tenure_snapshots": 51367,
+    "total_surveys": 51367,
+    "total_workload_snapshots": 51367,
+    "total_compensation_history": 10379,
+    "total_promotions": 379,
+    "total_outcomes": 10000,
+    "voluntary_attrition_rate_pct": 10.0,
+    "total_interventions": 1,
+    "total_intervention_events": 1,
+    "error_count": 0,
+    "warning_count": 0,
+    "passed": true,
+    "issues": []
+}

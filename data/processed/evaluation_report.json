@@ -1,0 +1,42 @@
+{
+    "evaluated_employees": 10000,
+    "voluntary_leavers": 1000,
+    "base_rate": 0.1,
+    "roc_auc": 0.5492,
+    "by_priority": {
+        "HIGH": {
+            "employees": 222,
+            "voluntary_leavers": 32,
+            "voluntary_attrition_rate": 0.1441,
+            "lift_over_base_rate": 1.44
+        },
+        "MODERATE": {
+            "employees": 3644,
+            "voluntary_leavers": 415,
+            "voluntary_attrition_rate": 0.1139,
+            "lift_over_base_rate": 1.14
+        },
+        "ROUTINE": {
+            "employees": 6134,
+            "voluntary_leavers": 553,
+            "voluntary_attrition_rate": 0.0902,
+            "lift_over_base_rate": 0.9
+        }
+    },
+    "flag_high_only": {
+        "flagged_employees": 222,
+        "voluntary_leavers_flagged": 32,
+        "precision": 0.1441,
+        "recall": 0.032,
+        "lift_over_base_rate": 1.44
+    },
+    "flag_high_and_moderate": {
+        "flagged_employees": 3866,
+        "voluntary_leavers_flagged": 447,
+        "precision": 0.1156,
+        "recall": 0.447,
+        "lift_over_base_rate": 1.16
+    },
+    "top_decile_capture_rate": 0.133,
+    "note": "Synthetic labels were sampled with weights based on engagement, utilisation and working hours, so these metrics measure recovery of planted signal, not real-world accuracy."
+}

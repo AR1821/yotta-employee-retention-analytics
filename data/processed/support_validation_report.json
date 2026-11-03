@@ -1,0 +1,23 @@
+{
+    "total_assessments": 10000,
+    "unique_employee_ids": 10000,
+    "priority_distribution": {
+        "MODERATE": 3644,
+        "HIGH": 222,
+        "ROUTINE": 6134
+    },
+    "validation_errors": 0,
+    "passed": true,
+    "checks": [
+        "row_count",
+        "unique_employee_ids",
+        "score_ranges",
+        "component_sum",
+        "priority_classification",
+        "reason_code_explainability",
+        "human_review_requirements",
+        "assessment_status",
+        "feature_cutoff_date",
+        "rule_version"
+    ]
+}

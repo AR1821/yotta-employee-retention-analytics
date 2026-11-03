@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Environment and secrets (copy .env.example instead)
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated data: reproducible with scripts/run_pipeline.ps1.
+# Small reports, edge cases and data/sample/ are committed.
+data/raw/
+data/reports/
+data/processed/*.csv
+!data/processed/*_issues.csv
+data/ground_truth/*.json
+
+# Node
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
